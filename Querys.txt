@@ -1,0 +1,26 @@
+insert into cajero (idcajero,fechacaje,saldocaje) values
+(01,'08/05/2020',500000000);
+
+insert into usuario (cedula,nombreusu,apellidousu,telefonousu,direccionusu) values 
+(0123,'Miguel','Lopez',3123456789,'Cr 34 N 5-4'),
+(0321,'Angel','Michelsen',3216549873,'Cr 50 N 12-4');
+
+insert into tarjeta (numerotar,clavetar, fechaven, estadotar) values
+(1472,1234,'08/05/2021','true'),
+(1592,4321,'05/08/2021','true');
+
+insert into cuenta (numcue,estadocue,saldocue,fechaaper,cedula,numerotar) values
+(1357,'true',3000000,'05/08/2015',0123,1472),
+(1486,'true',2500000,'08/05/2016',0321,1592);
+
+insert into transaccion (idtrans,numcue,nombretrans) values 
+(01,1357,'retiro'),
+(02,1357,'consignacion'),
+(03,1486,'retiro'),
+(04,1486,'consignacion');
+
+insert into cajerooperacion (ids,idcajero,idtrans) values 
+(001,01,01),
+(002,01,02),
+(003,01,03),
+(004,01,04);
